@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.compile_Sdk_Version
+    buildToolsVersion rootProject.build_Tools_Version
+
+    defaultConfig {
+        minSdkVersion rootProject.min_Sdk_Version
+        targetSdkVersion rootProject.target_Sdk_Version
+        versionCode rootProject.version_Code
+        versionName rootProject.version_Name
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    //添加签名文件
+    signingConfigs {
+        sample {
+            storeFile file('../sample.jks')
+            storePassword "Sample"
+            keyAlias "Sample"
+            keyPassword "Sample"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.sample
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.sample
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile "com.android.support:appcompat-v7:$rootProject.support_version"
+}
+
+//生成Drawable文件夹
+task createDrawableDir {
+    File createDrawableDir
+    createDrawableDir = file('src/main/res/drawable')
+    createDrawableDir.mkdirs()
+    createDrawableDir = file('src/main/res/drawable-nodpi')
+    createDrawableDir.mkdirs()
+    createDrawableDir = file('src/main/res/drawable-hdpi')
+    createDrawableDir.mkdirs()
+    createDrawableDir = file('src/main/res/drawable-mdpi')
+    createDrawableDir.mkdirs()
+    createDrawableDir = file('src/main/res/drawable-xhdpi')
+    createDrawableDir.mkdirs()
+    createDrawableDir = file('src/main/res/drawable-xxhdpi')
+    createDrawableDir.mkdirs()
+    createDrawableDir = file('src/main/res/drawable-xxxhdpi')
+    createDrawableDir.mkdirs()
+}
