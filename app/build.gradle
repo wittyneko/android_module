@@ -46,7 +46,9 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    //////// SYSTEM ///////
     compile "com.android.support:appcompat-v7:$rootProject.support_version"
+    //////// SDK ///////
 }
 
 //生成Drawable文件夹
