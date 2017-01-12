@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion rootProject.compile_Sdk_Version
@@ -25,6 +26,16 @@ android {
         }
     }
 
+    productFlavors {
+        dev {
+            minSdkVersion 21
+        }
+
+        rel {
+            minSdkVersion 15
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -38,6 +49,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
 }
 
 dependencies {
@@ -47,7 +62,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     //////// SYSTEM ///////
-    compile "com.android.support:appcompat-v7:$rootProject.support_version"
+    //////// BASE ///////
+    compile project(":base")
+    //////// LIBRARY ///////
     //////// SDK ///////
 }
 

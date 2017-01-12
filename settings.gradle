@@ -1,1 +1,5 @@
-include ':app', ':base', ':base_resource', ':lib', ':sdk'
+include ':app'
+include ':base', ':base-resource'
+include ':lib'
+include ':net'
+include ':sdk', ':net'
