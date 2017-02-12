@@ -53,7 +53,7 @@ dependencies {
     compile project(":base")
     //////// LIBRARY ///////
     //图片加载
-    compile "com.github.bumptech.glide:glide:$rootProject.glide_version"
-    //compile "com.squareup.picasso:picasso:$rootProject.picasso_version"
-    //compile "com.facebook.fresco:fresco:$rootProject.fresco_version"
+    //compile rootProject.glide
+    //compile rootProject.picasso
+    //compile rootProject.fresco
 }

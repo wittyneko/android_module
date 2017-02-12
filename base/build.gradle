@@ -35,7 +35,7 @@ android {
 
         debug {
             minifyEnabled false
-            signingConfig signingConfigs.sample
+            //signingConfig project(':base-config').signingConfigs.sample
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -52,19 +52,20 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':base-resource')
+    //compile project(':base-config')
     compile "com.android.support:appcompat-v7:$rootProject.support_version"
     //////// BASE ///////
     //Kotlin
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     //RxJava
-    compile "io.reactivex:rxjava:$rootProject.rxjava_version"
-    compile "io.reactivex:rxandroid:$rootProject.rxandroid_version"
+    compile rootProject.rxjava
+    compile rootProject.rxandroid
     //RxLifecycle管理Rx的生命周期
-    compile "com.trello:rxlifecycle:$rootProject.rxlifecycle_version"
-    compile "com.trello:rxlifecycle-components:$rootProject.rxlifecycle_version"
-    //compile "com.trello:rxlifecycle-kotlin:$rootProject.rxlifecycle_version"
+    compile rootProject.rxlifecycle
+    compile rootProject.rxlifecycle_components
+    //compile rootProject.rxlifecycle_kotlin
     //动画兼容
-    compile "com.nineoldandroids:library:$rootProject.nineold_version"
+    compile rootProject.nineoldandroids
     //Gson解析
-    compile "com.google.code.gson:gson:$rootProject.gson_version"
+    compile rootProject.gson
 }

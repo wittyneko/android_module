@@ -1,5 +1,5 @@
 include ':app'
 include ':base', ':base-resource'
-include ':lib'
+include ':lib', ':lib.glide'
 include ':net'
-include ':sdk', ':net'
+include ':sdk'

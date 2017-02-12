@@ -52,7 +52,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(":base")
     //retrofit网络
-    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofit_version"
-    compile "com.squareup.retrofit2:converter-gson:$rootProject.retrofit_converter_gson_version"
-    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.retrofit_converter_gson_version"
+    compile rootProject.retrofit
+    compile rootProject.retrofit_converter_gson
+    compile rootProject.retrofit_adapter_rxjava
 }
