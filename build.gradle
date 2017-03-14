@@ -7,32 +7,82 @@ ext {
     version_Code = 100000
     version_Name = "1.0.0"
 
-    //////// SYSTEM ///////
+    //////// ====== SYSTEM ====== ///////
     support_version = "25.1.0"
-    //////// BASE ///////
-    rxjava = "io.reactivex:rxjava:1.1.6"
+    //////// ====== BASE ====== ///////
+    // RxJava 1.0
+    rxjava = "io.reactivex:rxjava:1.2.7"
     rxandroid = "io.reactivex:rxandroid:1.2.1"
+
+    rxbinding_version = "1.0.1"
+    rxbinding = "com.jakewharton.rxbinding:rxbinding:$rxbinding_version"
+    rxbinding_support_v4 = "com.jakewharton.rxbinding:rxbinding-support-v4:$rxbinding_version"
+    rxbinding_appcompat_v7 = "com.jakewharton.rxbinding:rxbinding-appcompat-v7:$rxbinding_version"
+    rxbinding_recyclerview_v7 = "com.jakewharton.rxbinding:rxbinding-recyclerview-v7:$rxbinding_version"
+    rxbinding_leanback_v17 = "com.jakewharton.rxbinding:rxbinding-leanback-v17:$rxbinding_version"
+    rxbinding_design = "com.jakewharton.rxbinding:rxbinding-design:$rxbinding_version"
 
     rxlifecycle_version = "0.6.1"
     rxlifecycle = "com.trello:rxlifecycle:$rxlifecycle_version"
     rxlifecycle_components = "com.trello:rxlifecycle-components:$rxlifecycle_version"
     rxlifecycle_kotlin = "com.trello:rxlifecycle-kotlin:$rootProject.rxlifecycle_version"
+    rxlifecycle_navi = "com.trello:rxlifecycle-navi:$rootProject.rxlifecycle_version"
 
-    retrofit = "com.squareup.retrofit2:retrofit:2.1.0"
-    retrofit_converter_gson = "com.squareup.retrofit2:converter-gson:2.0.2"
-    retrofit_adapter_rxjava = "com.squareup.retrofit2:adapter-rxjava:2.0.2"
+    // RxJava 2.0
+    // https://github.com/ReactiveX/RxJava
+    rxjava2 = "io.reactivex.rxjava2:rxjava:2.0.1"
+    // https://github.com/ReactiveX/RxAndroid
+    rxandroid2 = "io.reactivex:rxandroid:2.0.1"
+    // https://github.com/JakeWharton/RxBinding
+    rxbinding2_version = "2.0.0"
+    rxbinding2 = "com.jakewharton.rxbinding2:rxbinding:$rxbinding2_version"
+    rxbinding2_support_v4 = "com.jakewharton.rxbinding2:rxbinding-support-v4:$rxbinding2_version"
+    rxbinding2_appcompat_v7 = "com.jakewharton.rxbinding2:rxbinding-appcompat-v7:$rxbinding2_version"
+    rxbinding2_recyclerview_v7 = "com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:$rxbinding2_version"
+    rxbinding2_leanback_v17 = "com.jakewharton.rxbinding2:rxbinding-leanback-v17:$rxbinding2_version"
+    rxbinding2_design = "com.jakewharton.rxbinding2:rxbinding-design:$rxbinding2_version"
+    // https://github.com/trello/RxLifecycle
+    rxlifecycle2_version = "2.0.1"
+    rxlifecycle2 = "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycle2_version"
+    rxlifecycle2_android = "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycle2_version"
+    rxlifecycle2_components = "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycle2_version"
+    rxlifecycle2_kotlin = "com.trello.rxlifecycle2:rxlifecycle-kotlin:$rootProject.rxlifecycle2_version"
+    rxlifecycle2_navi = "com.trello.rxlifecycle2:rxlifecycle-navi:$rootProject.rxlifecycle2_version"
 
+
+    // 网络请求
+    // https://github.com/square/retrofit
+    retrofit_version = "2.2.0"
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofit_version"
+    retrofit_adapter_rxjava = "com.squareup.retrofit2:adapter-rxjava:$retrofit_version"
+    retrofit_adapter_rxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    retrofit_converter_gson = "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    retrofit_converter_jackson = "com.squareup.retrofit2:converter-jackson:$retrofit_version"
+    retrofit_converter_moshi = "com.squareup.retrofit2:converter-moshi:$retrofit_version"
+    retrofit_converter_protobuf = "com.squareup.retrofit2:converter-protobuf:$retrofit_version"
+    retrofit_converter_scalars = "com.squareup.retrofit2:converter-scalars:$retrofit_version"
+    retrofit_converter_simplexml = "com.squareup.retrofit2:converter-simplexml:$retrofit_version"
+    retrofit_cconverter_wire = "com.squareup.retrofit2:converter-wire:$retrofit_version"
+
+    // 动画兼容
+    // https://github.com/JakeWharton/NineOldAndroids
     nineoldandroids = "com.nineoldandroids:library:2.4.0"
+    // JSON 解析
+    // https://github.com/google/gson
     gson = "com.google.code.gson:gson:2.2.4"
-    //////// LIBRARY ///////
+    //////// ====== LIBRARY ====== ///////
+    // 图片加载
+    // https://github.com/bumptech/glide
     glide = "com.github.bumptech.glide:glide:3.7.0"
     //glide-transformations see:https://github.com/wasabeef/glide-transformations
     glide_transformations = "jp.wasabeef:glide-transformations:2.0.1"
     //GlidePalette see: https://github.com/florent37/GlidePalette
     glide_palette = "com.github.florent37:glidepalette:2.0.1"
+    // https://github.com/square/picasso
     picasso = "com.squareup.picasso:picasso:2.5.2"
+    // https://github.com/facebook/fresco
     fresco = "com.facebook.fresco:fresco:0.12.0"
-    //////// SDK ///////
+    //////// ====== SDK ====== ///////
 
 }
 
