@@ -26,6 +26,10 @@ ext {
     gson = "com.google.code.gson:gson:2.2.4"
     //////// LIBRARY ///////
     glide = "com.github.bumptech.glide:glide:3.7.0"
+    //glide-transformations see:https://github.com/wasabeef/glide-transformations
+    glide_transformations = "jp.wasabeef:glide-transformations:2.0.1"
+    //GlidePalette see: https://github.com/florent37/GlidePalette
+    glide_palette = "com.github.florent37:glidepalette:2.0.1"
     picasso = "com.squareup.picasso:picasso:2.5.2"
     fresco = "com.facebook.fresco:fresco:0.12.0"
     //////// SDK ///////
@@ -49,7 +53,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:2.3.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
